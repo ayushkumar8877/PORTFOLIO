@@ -24,6 +24,7 @@
         <li><a href="#contact" style="--i:6">Contact </a></li>
       </ul>
       <div id="menu-icon" class="bx bx-menu"></div>
+      <!-- <button onclick="toggleTheme()" id="themeButton" class="bx bx-sun"></button> -->
     </header>
 
     <!-- home section -->
@@ -122,7 +123,7 @@
         <p align="justify">
           I am a passionate and dedicated Computer Science graduate eager to
           apply my knowledge and skills in software development,
-          problem-solving, and emerging technologies. I have a strong foundation
+          problem-solving, and emerging technologies.I have a strong foundation
           in programming languages like Python, Java, and C programming
           langauge, along with experience in web development, data structures,
           and algorithms. I enjoy building innovative solutions, exploring new
@@ -474,6 +475,16 @@
     
       const scrollTop = document.querySelectorAll(".scroll-top");
       scrollTop.forEach((el)=>observer.observe(el));
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("themeButton");
+        button.addEventListener("click", function() {
+            document.body.classList.toggle("dark-theme");
+            document.body.classList.toggle("light-theme");
+            console.log("Theme toggled!");
+        });
+    });
+
   </script>
   </body>
 </html>
