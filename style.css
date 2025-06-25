@@ -995,139 +995,189 @@ footer a i{
 
 
 /* Break Points================================================================= */
-@media(max-width:991px){
-    header{
-        padding: 15px 5%;
-    }
+/* Base Styles — for screens above 1200px */
+@media (min-width: 1200px) {
+  :root {
+    --big-font: 4.5rem;
+    --normal-font: 2rem;
+    --h2-font: 3.5rem;
+  }
 
-    footer{
-        padding: 15px 5%;
-    }
+  .home {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    section{
-        padding: 50px 5%;
-    }
-
-    .navlist a{
-        padding: 8px 15px;
-    }
-
-    :root{
-        --big-font: 2.2rem;
-        --normal-font: 1.8rem;
-        --neon-box-shadow: 0 0 .8rem #12f7ff;
-        --h2-font: 3rem;
-    }
-
-    .home-content{
-        margin-top: 5rem;
-    }
-
-    .social-icons{
-        margin-top: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    #menu-icon {
-        display: block;
-        transition: all 0.4s ease;
-    }
-
-    #menu-icon.bx-x{
-        transform: rotate(-180deg);
-
-    }
-
-    .navlist {
-        display: flex; 
-        position: absolute;
-        top: -1000px;
-        right: 0;
-        left: 0;
-        flex-direction: column;
-        background: var(--bg-color);
-        text-align: left;
-        padding: 0 5%;
-        transition: all 0.45s ease;
-    }
-
-    .navlist a {
-        display: block;
-        padding-bottom: 1rem;
-        font-size: 1rem;
-    }
-
-    .navlist.open {
-        top: 100%;
-    }
-
-    .home{
-        grid-template-columns: 1fr;
-    }
-
-    .home-image{
-        margin-bottom: 5rem;
-    }
-
-    .liquid-shape{
-        width: 80%;
-        left: 10%;
-        top: 8%;
-    }
-
-    .about{
-        flex-direction: column-reverse;
-    }
-
-    .skill-main{
-        grid-template-columns: 1fr;
-    }
-    
-    .fillter-buttons{
-        margin: 2.5rem 0;
-    }
-
-    footer p{
-        font-size: .8rem;
-    }
-}
-
-@media(max-width:370px){
-    html{
-        font-size: 60%;
-    }
-    footer p{
-        font-size: .6rem;
-    }
-    .fillter-buttons .button{
-        font-size: .8rem;
-    }
-    .img-about img{
-        width: 300px;
-    }
-    .info-about1,.info-about2,.info-about3{
-        display: none;
-    }
-
-    .img-about p{
-        font-size: 1rem;
-    }
-}
-
-
-/* 
-.light-theme {
-    background: #ffffff;
-    color: #fffdfd;
-}
-.dark-theme {
-    background: hsl(0, 14%, 97%);
-    color: #ffffff;
-}
-button {
+  .navlist a {
+    font-size: 1.2rem;
     padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-} */
+  }
+
+  section {
+    padding: 80px 10%;
+  }
+}
+
+/* Large tablets & laptops (991px - 1200px) */
+@media (max-width: 1200px) {
+  header, footer {
+    padding: 20px 7%;
+  }
+
+  section {
+    padding: 60px 7%;
+  }
+
+  :root {
+    --big-font: 3.5rem;
+    --normal-font: 1.8rem;
+    --h2-font: 3rem;
+  }
+}
+
+/* Tablets & Small Laptops (768px - 991px) */
+@media (max-width: 991px) {
+  header, footer {
+    padding: 15px 5%;
+  }
+
+  section {
+    padding: 50px 5%;
+  }
+
+  .navlist a {
+    padding: 8px 15px;
+  }
+
+  :root {
+    --big-font: 2.8rem;
+    --normal-font: 1.6rem;
+    --h2-font: 2.5rem;
+  }
+
+  .home-content {
+    margin-top: 5rem;
+  }
+
+  .social-icons {
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile Landscape and Large Phones (576px - 768px) */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    transition: all 0.4s ease;
+  }
+
+  #menu-icon.bx-x {
+    transform: rotate(-180deg);
+  }
+
+  .navlist {
+    display: flex;
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background: var(--bg-color);
+    padding: 0 5%;
+    text-align: left;
+    transition: all 0.45s ease;
+  }
+
+  .navlist a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .navlist.open {
+    top: 100%;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .home-image {
+    margin-bottom: 4rem;
+  }
+
+  .liquid-shape {
+    width: 80%;
+    left: 10%;
+    top: 8%;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .skill-main {
+    grid-template-columns: 1fr;
+  }
+
+  .fillter-buttons {
+    margin: 2rem 0;
+  }
+
+  footer p {
+    font-size: .8rem;
+  }
+}
+
+/* Phones (370px - 575px) */
+@media (max-width: 575px) {
+  html {
+    font-size: 65%;
+  }
+
+  .home-image img,
+  .img-about img {
+    width: 260px;
+  }
+
+  .fillter-buttons .button {
+    font-size: .8rem;
+  }
+
+  .info-about1, .info-about2, .info-about3 {
+    display: none;
+  }
+
+  .img-about p {
+    font-size: .9rem;
+  }
+
+  footer p {
+    font-size: .7rem;
+  }
+}
+
+/* Very Small Devices (below 370px) */
+@media (max-width: 370px) {
+  html {
+    font-size: 60%;
+  }
+
+  .home-image img,
+  .img-about img {
+    width: 220px;
+  }
+
+  .fillter-buttons .button {
+    font-size: .75rem;
+  }
+
+  footer p {
+    font-size: .6rem;
+  }
+
+  .img-about p {
+    font-size: .85rem;
+  }
+}
+
+
