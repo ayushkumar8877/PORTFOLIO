@@ -16,12 +16,12 @@
     <header>
       <div class="logo"><span>A</span>yush.</div>
       <ul class="navlist">
-        <li><a href="#home" style="--i:1">Home</a></li>
-        <li><a href="#about" style="--i:2">About</a></li>
-        <li><a href="#services" style="--i:3">Services</a></li>
-        <li><a href="#skills" style="--i:4">Skills</a></li>
-        <li><a href="#portfolio" style="--i:5">Projects</a></li>
-        <li><a href="#contact" style="--i:6">Contact </a></li>
+        <li><a href="#home" style="--i: 1">Home</a></li>
+        <li><a href="#about" style="--i: 2">About</a></li>
+        <li><a href="#services" style="--i: 3">Services</a></li>
+        <li><a href="#skills" style="--i: 4">Skills</a></li>
+        <li><a href="#portfolio" style="--i: 5">Projects</a></li>
+        <li><a href="#contact" style="--i: 6">Contact </a></li>
       </ul>
       <div id="menu-icon" class="bx bx-menu"></div>
 
@@ -55,13 +55,19 @@
         </div>
 
         <div class="btn-box">
-          <a href="Ayush_cv.pdf" class="btn" download="Ayush_cv.pdf">Download CV</a>
+          <a href="Ayush_cv.pdf" class="btn" download="Ayush_cv.pdf"
+            >Download CV</a
+          >
           <a href="#" class="btn">Hire Me Now</a>
         </div>
 
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/ayush-kumar-69062a250/"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/ayushkumar8877"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/ayush-kumar-69062a250/"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="https://github.com/ayushkumar8877"
+            ><i class="bx bxl-github"></i
+          ></a>
         </div>
       </div>
 
@@ -276,7 +282,7 @@
         </div>
 
         <!-- Right Section - Professional Skills -->
-        <div class="skill-right scroll-scale ">
+        <div class="skill-right scroll-scale">
           <h3>Professional Skills</h3>
           <div class="professional">
             <div class="professional">
@@ -378,7 +384,7 @@
                 learners develop job-ready skills and build strong portfolios
                 with expert feedback.
               </p>
-              <a href="#"><i class="bx bx-link-external"></i></a>
+              <a href="https://github.com/ayushkumar8877/Smartedu-E-learning.git"><i class="bx bx-link-external"></i></a>
             </div>
           </div>
 
@@ -399,6 +405,23 @@
               <a href="#"><i class="bx bx-link-external"></i></a>
             </div>
           </div>
+
+           <!-- Project 4 -->
+          <div class="port-box mix inter">
+            <div class="port-image">
+              <img src="vibely3.png" alt="Projects Section" />
+            </div>
+            <div class="port-content">
+              <h3>Real-time Chat Application</h3>
+              <p>
+                Vibely is a full-stack social networking and real-time chat app
+                built with the MERN stack and Stream Chat API. It features user
+                authentication, friend requests, onboarding, and secure
+                real-time messaging
+              </p>
+              <a href="https://github.com/ayushkumar8877/VIBELY-CHAT-APP.git"><i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -411,16 +434,31 @@
         <h2>Contact Me</h2>
       </div>
 
-      <form action="https://formspree.io/f/manqrbav" method="post" class="scroll-bottom">
+      <form
+        action="https://formspree.io/f/manqrbav"
+        method="post"
+        class="scroll-bottom"
+      >
         <label for="name"></label>
-        <input type="text" id="name" name="name" placeholder="Name" required/>
-    
+        <input type="text" id="name" name="name" placeholder="Name" required />
+
         <label for="email"></label>
-        <input type="email" id="email" name="email" placeholder="Email" required/>
-    
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+
         <label for="phone"></label>
-        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required/>
-        
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number"
+          required
+        />
 
         <label for="message"></label>
         <textarea
@@ -435,9 +473,10 @@
       </form>
     </section>
 
-  
     <footer>
-      <p class="scroll-scale">Copyright &copy; 2024 by Ayush || All Right Reservd.</p>
+      <p class="scroll-scale">
+        Copyright &copy; 2024 by Ayush || All Right Reservd.
+      </p>
       <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
     </footer>
 
@@ -446,49 +485,45 @@
     <script>
       let menuIcon = document.querySelector("#menu-icon");
       let navlist = document.querySelector(".navlist");
-  
+
       menuIcon.onclick = () => {
-          menuIcon.classList.toggle("bx-x");
-          navlist.classList.toggle("open");
-          console.log("Menu Clicked!");
+        menuIcon.classList.toggle("bx-x");
+        navlist.classList.toggle("open");
+        console.log("Menu Clicked!");
       };
 
-      window.onscroll = ()=>{
+      window.onscroll = () => {
         menuIcon.classList.remove("bx-x");
         navlist.classList.remove("open");
-      }
+      };
 
-      const observer = new IntersectionObserver((entries)=>{
-        entries.forEach((entry)=>{
-          if(entry.isIntersecting){
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
             entry.target.classList.add("show-items");
-          }else{
+          } else {
             entry.tarrget.classList.remove("show-items");
           }
         });
       });
-    
+
       const scrollScale = document.querySelectorAll(".scroll-scale");
-      scrollScale.forEach((el)=>observer.observe(el));
-    
+      scrollScale.forEach((el) => observer.observe(el));
+
       const scrollBottom = document.querySelectorAll(".scroll-bottom");
-      scrollBottom.forEach((el)=>observer.observe(el));
-    
+      scrollBottom.forEach((el) => observer.observe(el));
+
       const scrollTop = document.querySelectorAll(".scroll-top");
-      scrollTop.forEach((el)=>observer.observe(el));
+      scrollTop.forEach((el) => observer.observe(el));
 
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const button = document.getElementById("themeButton");
-        button.addEventListener("click", function() {
-            document.body.classList.toggle("dark-theme");
-            document.body.classList.toggle("light-theme");
-            console.log("Theme toggled!");
+        button.addEventListener("click", function () {
+          document.body.classList.toggle("dark-theme");
+          document.body.classList.toggle("light-theme");
+          console.log("Theme toggled!");
         });
-    });
-
-
-
-
-  </script>
+      });
+    </script>
   </body>
 </html>
